@@ -12,7 +12,7 @@ export default function Hero() {
                     initial={{ opacity: 0, scale: 0.9 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.5 }}
-                    className="order-2 lg:order-1 relative aspect-square max-w-[400px] mx-auto lg:mx-0 w-full rounded-2xl border border-white/10 bg-white/5 overflow-hidden flex items-center justify-center p-6 sm:p-8 backdrop-blur-sm"
+                    className="order-2 lg:order-1 relative aspect-square max-w-[400px] mx-auto lg:mx-0 w-full rounded-2xl border border-white/10 bg-white/5 overflow-hidden flex items-center justify-center p-6 sm:p-8 backdrop-blur-sm "
                 >
                     <div className="absolute inset-0 bg-linear-to-br from-accent/20 to-transparent opacity-20" />
                     {/* Mockup code window */}

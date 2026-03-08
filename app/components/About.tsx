@@ -18,7 +18,7 @@ export default function About() {
 
                     <div className="prose prose-invert prose-lg max-w-none text-muted leading-relaxed">
                         <p>
-                            I'm Kartik Srivastava, a developer passionate about building modern web applications and solving complex problems.
+                            I'm Kartik, a developer passionate about building modern web applications and solving complex problems.
                         </p>
                         <p className="mt-4">
                             I have a strong foundation in <span className="text-white font-medium">Data Structures &amp; Algorithms</span> and experience building production-ready applications using <span className="text-white font-medium">React, Next.js, and TypeScript</span>.

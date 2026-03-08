@@ -21,16 +21,16 @@ export default function Contact() {
                     </p>
 
                     <div className="flex flex-wrap justify-center gap-6">
-                        <a href="#" className="flex items-center gap-2 px-6 py-3 rounded-full bg-white/5 border border-white/10 hover:border-accent hover:text-accent transition-all">
+                        <a href="https://www.linkedin.com/in/kartixrivastava" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 px-6 py-3 rounded-full bg-white/5 border border-white/10 hover:border-accent hover:text-accent transition-all">
                             <Linkedin className="w-5 h-5" /> LinkedIn
                         </a>
-                        <a href="#" className="flex items-center gap-2 px-6 py-3 rounded-full bg-white/5 border border-white/10 hover:border-accent hover:text-accent transition-all">
+                        <a href="https://github.com/kartixrivastava" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 px-6 py-3 rounded-full bg-white/5 border border-white/10 hover:border-accent hover:text-accent transition-all">
                             <Github className="w-5 h-5" /> GitHub
                         </a>
-                        <a href="#" className="flex items-center gap-2 px-6 py-3 rounded-full bg-white/5 border border-white/10 hover:border-accent hover:text-accent transition-all">
+                        <a href="https://leetcode.com/u/kartixrivastava/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 px-6 py-3 rounded-full bg-white/5 border border-white/10 hover:border-accent hover:text-accent transition-all">
                             <Code2 className="w-5 h-5" /> LeetCode
                         </a>
-                        <a href="mailto:hello@example.com" className="flex items-center gap-2 px-6 py-3 rounded-full bg-white/5 border border-white/10 hover:border-accent hover:text-accent transition-all">
+                        <a href="mailto:kartiksrivastava88239@gmail.com" className="flex items-center gap-2 px-6 py-3 rounded-full bg-white/5 border border-white/10 hover:border-accent hover:text-accent transition-all">
                             <Mail className="w-5 h-5" /> Email
                         </a>
                     </div>

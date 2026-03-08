@@ -85,7 +85,7 @@ export default function Hero() {
                         <a href="#projects" className="flex items-center gap-2 bg-accent text-[#0B0F14] px-6 py-3 rounded-lg font-semibold hover:bg-accent/90 transition-all cursor-pointer">
                             View Projects <ArrowRight className="w-4 h-4" />
                         </a>
-                        <a href="#" className="flex items-center gap-2 bg-white/5 text-white border border-white/10 px-6 py-3 rounded-lg font-medium hover:bg-white/10 hover:border-white/20 transition-all cursor-pointer">
+                        <a href="/Resume/Kartik_Resume.pdf" download="Kartik_Srivastava_Resume.pdf" className="flex items-center gap-2 bg-white/5 text-white border border-white/10 px-6 py-3 rounded-lg font-medium hover:bg-white/10 hover:border-white/20 transition-all cursor-pointer">
                             <Download className="w-4 h-4" /> Download Resume
                         </a>
                     </div>

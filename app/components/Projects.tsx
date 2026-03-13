@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { ExternalLink, Github, ChevronLeft, ChevronRight } from "lucide-react";
 import Image from "next/image";
@@ -35,6 +35,13 @@ const projects = [
 
 export default function Projects() {
     const [currentIndex, setCurrentIndex] = useState(0);
+
+    useEffect(() => {
+        const timer = setInterval(() => {
+            setCurrentIndex((prev) => (prev + 1) % projects.length);
+        }, 5000);
+        return () => clearInterval(timer);
+    }, []);
 
     const handleNext = () => {
         setCurrentIndex((prev) => (prev + 1) % projects.length);

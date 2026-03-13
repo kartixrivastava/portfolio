@@ -25,7 +25,7 @@ export default function Hero() {
                         <div className="p-4 sm:p-6 font-mono text-xs sm:text-sm text-green-400 opacity-80 flex flex-col gap-2 overflow-hidden wrap-break-word">
                             <motion.div
                                 initial={{ width: 0 }}
-                                animate={{ width: "100%" }}
+                                animate={{ width: "35%" }}
                                 transition={{ duration: 2, ease: "linear" }}
                                 className="overflow-hidden whitespace-nowrap border-r-2 border-green-500 pr-2 animate-pulse w-max"
                             >
@@ -72,7 +72,7 @@ export default function Hero() {
 
                     <p className="text-lg md:text-xl text-muted max-w-xl leading-relaxed">
                         Frontend developer focused on building fast, scalable, and intuitive web applications.
-                        Strong foundation in Data Structures &amp; Algorithms with hands-on experience shipping projects using React, Next.js, and TypeScript.
+                        Strong foundation in Data Structures &amp; Algorithms with hands-on experience in building production-ready applications using React, Next.js, and TypeScript.
                     </p>
 
                     <div className="flex flex-wrap gap-3 items-center mt-2 opacity-80">

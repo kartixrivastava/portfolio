@@ -30,6 +30,13 @@ const projects = [
         github: "https://github.com/kartixrivastava/centora",
         live: "https://centora-eta.vercel.app/",
         image: "/projects/Centora.png",
+    },{
+        title:"CodeFlow — AI Coding Assistant",
+        description:"AI-powered coding assistant that helps developers write code faster and more efficiently. Features real-time code suggestions, error detection, and code optimization.",
+        tech:["React","Tailwind CSS"],
+        github:"https://github.com/kartixrivastava/codeflow",
+        live:"https://code-flow-dun-seven.vercel.app/",
+        image:"/projects/CodeFlow.png",
     }
 ];
 

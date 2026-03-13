@@ -21,7 +21,7 @@ export default function About() {
                             I'm Kartik, a developer passionate about building modern web applications and solving complex problems.
                         </p>
                         <p className="mt-4">
-                            I have a strong foundation in <span className="text-white font-medium">Data Structures &amp; Algorithms</span> and experience building production-ready applications using <span className="text-white font-medium">React, Next.js, and TypeScript</span>.
+                            I have a strong foundation in <span className="text-white font-medium">Data Structures &amp; Algorithms</span> and experience in building production-ready applications using <span className="text-white font-medium">React, Next.js, and TypeScript</span>.
                         </p>
                         <p className="mt-4">
                             I enjoy designing intuitive user experiences and building scalable frontend architectures.

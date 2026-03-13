@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 const links = [
     { name: "About", href: "#about" },
@@ -13,9 +14,27 @@ export default function Navbar() {
     return (
         <header className=" fixed top-0 left-0 w-full z-50 py-4 backdrop-blur-xl">
             <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
-                <Link href="/" className="text-xl font-bold tracking-tighter">
-                    Kartik <span className="text-accent">/</span>
-                </Link>
+                <motion.div
+                    initial={{ opacity: 0, x: -20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.5 }}
+                >
+                    <Link href="/" className="text-xl font-bold tracking-tighter group flex items-center">
+                        Kartik 
+                        <motion.span 
+                            className="text-accent ml-1 inline-block"
+                            animate={{ rotate: [0, 20, -20, 0] }}
+                            transition={{ 
+                                duration: 1,
+                                ease: "easeInOut",
+                                repeat: Infinity,
+                                repeatDelay: 3
+                            }}
+                        >
+                            /
+                        </motion.span>
+                    </Link>
+                </motion.div>
 
                 {/* Desktop Nav */}
                 <nav className="hidden md:flex gap-8">

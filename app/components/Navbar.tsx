@@ -1,8 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
 import Link from "next/link";
-import { useState, useEffect } from "react";
 
 const links = [
     { name: "About", href: "#about" },
@@ -12,24 +10,8 @@ const links = [
 ];
 
 export default function Navbar() {
-    const [scrolled, setScrolled] = useState(false);
-
-    useEffect(() => {
-        const handleScroll = () => {
-            setScrolled(window.scrollY > 50);
-        };
-        window.addEventListener("scroll", handleScroll);
-        return () => window.removeEventListener("scroll", handleScroll);
-    }, []);
-
     return (
-        <motion.header
-            initial={{ y: -100 }}
-            animate={{ y: 0 }}
-            transition={{ duration: 0.5 }}
-            className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? "bg-background/80 backdrop-blur-md border-b border-border/50" : "bg-transparent py-4"
-                }`}
-        >
+        <header className=" fixed top-0 left-0 w-full z-50 py-4 backdrop-blur-xl">
             <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
                 <Link href="/" className="text-xl font-bold tracking-tighter">
                     Kartik <span className="text-accent">/</span>
@@ -49,6 +31,6 @@ export default function Navbar() {
                     ))}
                 </nav>
             </div>
-        </motion.header>
+        </header>
     );
 }

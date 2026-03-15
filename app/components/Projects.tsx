@@ -30,13 +30,13 @@ const projects = [
         github: "https://github.com/kartixrivastava/centora",
         live: "https://centora-eta.vercel.app/",
         image: "/projects/Centora.png",
-    },{
-        title:"CodeFlow — AI Coding Assistant",
-        description:"AI-powered coding assistant that helps developers write code faster and more efficiently. Features real-time code suggestions, error detection, and code optimization.",
-        tech:["React","Tailwind CSS"],
-        github:"https://github.com/kartixrivastava/codeflow",
-        live:"https://code-flow-dun-seven.vercel.app/",
-        image:"/projects/CodeFlow.png",
+    }, {
+        title: "CodeFlow — AI Coding Assistant",
+        description: "AI-powered coding assistant that helps developers write code faster and more efficiently. Features real-time code suggestions, error detection, and code optimization.",
+        tech: ["React", "Tailwind CSS"],
+        github: "https://github.com/kartixrivastava/codeflow",
+        live: "https://code-flow-dun-seven.vercel.app/",
+        image: "/projects/CodeFlow.png",
     }
 ];
 
@@ -71,17 +71,17 @@ export default function Projects() {
                         <h2 className="text-4xl md:text-5xl font-bold">
                             Projects<span className="text-accent">.</span>
                         </h2>
-                        
+
                         <div className="hidden md:flex gap-4">
-                            <button 
-                                onClick={handlePrev} 
+                            <button
+                                onClick={handlePrev}
                                 className="p-3 rounded-full border border-white/10 hover:border-accent hover:text-accent transition-colors bg-white/5 backdrop-blur-sm"
                                 aria-label="Previous project"
                             >
                                 <ChevronLeft className="w-6 h-6" />
                             </button>
-                            <button 
-                                onClick={handleNext} 
+                            <button
+                                onClick={handleNext}
                                 className="p-3 rounded-full border border-white/10 hover:border-accent hover:text-accent transition-colors bg-white/5 backdrop-blur-sm"
                                 aria-label="Next project"
                             >
@@ -92,13 +92,13 @@ export default function Projects() {
 
                     <div className="relative group">
                         <div className="overflow-hidden">
-                            <motion.div 
+                            <motion.div
                                 className="flex"
                                 animate={{ x: `-${currentIndex * 100}%` }}
                                 transition={{ type: "spring", stiffness: 300, damping: 30 }}
                             >
                                 {projects.map((project, idx) => (
-                                    <div 
+                                    <div
                                         key={project.title}
                                         className="w-full shrink-0 flex-none focus:outline-none"
                                     >
@@ -154,34 +154,33 @@ export default function Projects() {
                                 ))}
                             </motion.div>
                         </div>
-                        
+
                         {/* Mobile Navigation */}
                         <div className="flex gap-4 justify-center mt-12 md:hidden">
-                            <button 
-                                onClick={handlePrev} 
+                            <button
+                                onClick={handlePrev}
                                 className="p-3 rounded-full border border-white/10 hover:border-accent hover:text-accent transition-colors bg-white/5 backdrop-blur-sm"
                             >
                                 <ChevronLeft className="w-6 h-6" />
                             </button>
-                            <button 
-                                onClick={handleNext} 
+                            <button
+                                onClick={handleNext}
                                 className="p-3 rounded-full border border-white/10 hover:border-accent hover:text-accent transition-colors bg-white/5 backdrop-blur-sm"
                             >
                                 <ChevronRight className="w-6 h-6" />
                             </button>
                         </div>
-                        
+
                         {/* Dots Indicators */}
                         <div className="flex justify-center gap-3 mt-8">
                             {projects.map((_, idx) => (
                                 <button
                                     key={idx}
                                     onClick={() => setCurrentIndex(idx)}
-                                    className={`w-3 h-3 rounded-full transition-all ${
-                                        currentIndex === idx 
-                                            ? "bg-accent scale-125" 
+                                    className={`w-3 h-3 rounded-full transition-all ${currentIndex === idx
+                                            ? "bg-accent scale-125"
                                             : "bg-white/20 hover:bg-white/40"
-                                    }`}
+                                        }`}
                                     aria-label={`Go to project ${idx + 1}`}
                                 />
                             ))}

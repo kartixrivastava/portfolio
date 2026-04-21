@@ -1,6 +1,12 @@
 "use client";
 
-import React, { createContext, useContext, useEffect, useState } from "react";
+import React, {
+  createContext,
+  useContext,
+  useEffect,
+  useLayoutEffect,
+  useState,
+} from "react";
 
 type Theme = "light" | "dark";
 
@@ -21,12 +27,15 @@ function getPreferredTheme(): Theme {
   return prefersDark ? "dark" : "light";
 }
 
-export function ThemeProvider({ children }: { children: React.ReactNode }) {
-  const [theme, setTheme] = useState<Theme>("dark");
+const useIsomorphicLayoutEffect =
+  typeof window !== "undefined" ? useLayoutEffect : useEffect;
 
-  useEffect(() => {
-    const initial = getPreferredTheme();
-    setTheme(initial);
+export function ThemeProvider({ children }: { children: React.ReactNode }) {
+  /* Default light = matches :root in globals.css before hydration */
+  const [theme, setTheme] = useState<Theme>("light");
+
+  useIsomorphicLayoutEffect(() => {
+    setTheme(getPreferredTheme());
   }, []);
 
   useEffect(() => {

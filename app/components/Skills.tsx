@@ -28,19 +28,19 @@ const skillCategories = [
 
 export default function Skills() {
     return (
-        <section id="skills" className="py-24 relative border-t border-white/5 bg-white/1">
-            <div className="max-w-7xl mx-auto px-6">
+        <section id="skills" className="py-16 sm:py-20 lg:py-24 relative border-t border-white/5 bg-white/1">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true, margin: "-100px" }}
                     transition={{ duration: 0.5 }}
                 >
-                    <h2 className="text-4xl md:text-5xl font-bold mb-16">
+                    <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-8 sm:mb-12 lg:mb-16">
                         Skills<span className="text-accent">.</span>
                     </h2>
 
-                    <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
                         {skillCategories.map((category, idx) => (
                             <motion.div
                                 key={category.title}
@@ -48,7 +48,7 @@ export default function Skills() {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ duration: 0.5, delay: idx * 0.1 }}
-                                className="p-6 rounded-2xl border border-white/10 bg-white/5 hover:bg-white/10 hover:border-accent/40 transition-all group relative overflow-hidden"
+                                className="p-5 sm:p-6 rounded-2xl border border-white/10 bg-white/5 hover:bg-white/10 hover:border-accent/40 transition-all group relative overflow-hidden"
                             >
                                 <div className="absolute top-0 right-0 w-32 h-32 bg-accent/10 rounded-full blur-3xl -mr-16 -mt-16 group-hover:bg-accent/20 transition-all z-0" />
 

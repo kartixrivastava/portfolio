@@ -1,5 +1,8 @@
 @import "tailwindcss";
 
+/* Manual theme toggle: dark:* must follow html class, not OS preference */
+@custom-variant dark (&:where(.dark, .dark *));
+
 @theme {
   /* Light theme (default) */
   --color-background: #f9fafb;
@@ -29,6 +32,7 @@
   color-scheme: dark;
 }
 
+html,
 body {
   background-color: var(--color-background);
   color: var(--color-foreground);
@@ -53,6 +57,14 @@ body {
 
 .text-gradient {
   background: linear-gradient(to right, #00ffcc, #00b3ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Light mode: neon stops are too faint on white — use deeper, readable hues */
+html.light .text-gradient {
+  background: linear-gradient(to right, #0369a1, #5b21b6);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;

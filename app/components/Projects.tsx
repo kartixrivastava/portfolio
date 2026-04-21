@@ -12,7 +12,6 @@ const projects = [
         tech: ["React", "TypeScript", "Clerk", "Vercel"],
         github: "https://github.com/kartixrivastava/ugcai",
         live: "https://ugcai-iota.vercel.app/",
-        metric: "Authentication built with Clerk.",
         image: "/projects/UGCAi.png",
     },
     {
@@ -41,150 +40,92 @@ const projects = [
 ];
 
 export default function Projects() {
-    const [currentIndex, setCurrentIndex] = useState(0);
-
-    useEffect(() => {
-        const timer = setInterval(() => {
-            setCurrentIndex((prev) => (prev + 1) % projects.length);
-        }, 5000);
-        return () => clearInterval(timer);
-    }, []);
-
-    const handleNext = () => {
-        setCurrentIndex((prev) => (prev + 1) % projects.length);
-    };
-
-    const handlePrev = () => {
-        setCurrentIndex((prev) => (prev - 1 + projects.length) % projects.length);
-    };
-
     return (
-        <section id="projects" className="py-24 relative overflow-hidden">
-            <div className="max-w-7xl mx-auto px-6">
+        <section id="projects" className="py-16 sm:py-24 lg:py-32 relative">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true, margin: "-100px" }}
                     transition={{ duration: 0.5 }}
                 >
-                    <div className="flex justify-between items-end mb-16">
-                        <h2 className="text-4xl md:text-5xl font-bold">
+                    <div className="mb-12 sm:mb-16 lg:mb-20 text-center lg:text-left">
+                        <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight">
                             Projects<span className="text-accent">.</span>
                         </h2>
-
-                        <div className="hidden md:flex gap-4">
-                            <button
-                                onClick={handlePrev}
-                                className="p-3 rounded-full border border-white/10 hover:border-accent hover:text-accent transition-colors bg-white/5 backdrop-blur-sm"
-                                aria-label="Previous project"
-                            >
-                                <ChevronLeft className="w-6 h-6" />
-                            </button>
-                            <button
-                                onClick={handleNext}
-                                className="p-3 rounded-full border border-white/10 hover:border-accent hover:text-accent transition-colors bg-white/5 backdrop-blur-sm"
-                                aria-label="Next project"
-                            >
-                                <ChevronRight className="w-6 h-6" />
-                            </button>
-                        </div>
+                        <p className="mt-2 sm:mt-4 text-muted max-w-2xl text-base sm:text-lg mx-auto lg:mx-0">
+                            A curated selection of my recent work, focused on AI, SaaS, and cutting-edge web technologies.
+                        </p>
                     </div>
 
-                    <div className="relative group">
-                        <div className="overflow-hidden">
+                    <div className="flex flex-col gap-16 sm:gap-24 lg:gap-32">
+                        {projects.map((project, idx) => (
                             <motion.div
-                                className="flex"
-                                animate={{ x: `-${currentIndex * 100}%` }}
-                                transition={{ type: "spring", stiffness: 300, damping: 30 }}
+                                key={project.title}
+                                initial={{ opacity: 0, y: 50 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 0.8, delay: idx * 0.1 }}
+                                viewport={{ once: true }}
+                                className="group relative"
                             >
-                                {projects.map((project, idx) => (
-                                    <div
-                                        key={project.title}
-                                        className="w-full shrink-0 flex-none focus:outline-none"
+                                <div className="flex flex-col lg:flex-row gap-8 sm:gap-12 lg:gap-20 items-center">
+                                    {/* Image block with 3D effect */}
+                                    <motion.div
+                                        whileHover={{ y: -5, scale: 1.02 }}
+                                        className="w-full lg:w-3/5 aspect-auto min-h-[220px] sm:min-h-[280px] md:min-h-[320px] lg:min-h-[315px] rounded-2xl bg-white/5 border border-white/10 relative overflow-hidden group/img transition-all shadow-2xl lg:shadow-accent/5"
                                     >
-                                        <div className="flex flex-col lg:flex-row gap-8 lg:gap-16 items-center px-1">
-                                            {/* Image block */}
-                                            <div className="w-full lg:w-1/2 aspect-video rounded-xl bg-white/5 border border-white/10 relative overflow-hidden group/img transition-all flex items-center justify-center">
-                                                <div className="absolute inset-0 bg-linear-to-br from-accent/5 to-transparent opacity-0 group-hover/img:opacity-100 transition-opacity z-20 pointer-events-none" />
-                                                <Image
-                                                    src={project.image}
-                                                    alt={project.title}
-                                                    fill
-                                                    className="object-cover object-top transition-transform duration-700 group-hover/img:scale-105"
-                                                    sizes="(max-width: 1024px) 100vw, 50vw"
-                                                />
-                                            </div>
+                                        <div className="absolute inset-0 bg-linear-to-br from-accent/10 to-transparent opacity-0 group-hover/img:opacity-100 transition-opacity z-20 pointer-events-none" />
+                                        <Image
+                                            src={project.image}
+                                            alt={project.title}
+                                            fill
+                                            className="object-contain transition-transform duration-700 group-hover/img:scale-105"
+                                            sizes="(max-width: 1024px) 100vw, 60vw"
+                                        />
+                                    </motion.div>
 
-                                            {/* Content */}
-                                            <div className="w-full lg:w-1/2 flex flex-col justify-center lg:items-start text-left">
-                                                <h3 className="text-2xl sm:text-3xl font-bold mb-4 hover:text-accent transition-colors">{project.title}</h3>
+                                    {/* Content block */}
+                                    <div className="w-full lg:w-2/5 flex flex-col justify-center">
 
-                                                <div className="bg-white/5 border border-white/10 p-6 rounded-xl mb-6 relative z-10 w-full backdrop-blur-sm lg:shadow-xl lg:-ml-12 lg:pl-12 lg:pr-6">
-                                                    <p className="text-muted leading-relaxed">
-                                                        {project.description}
-                                                    </p>
-                                                    {project.metric && (
-                                                        <p className="mt-3 text-sm text-accent max-w-max bg-accent/10 px-2 py-1 rounded">{project.metric}</p>
-                                                    )}
-                                                </div>
+                                        <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6 group-hover:text-accent transition-colors duration-300">
+                                            {project.title}
+                                        </h3>
 
-                                                <ul className="flex flex-wrap gap-2 mb-8">
-                                                    {project.tech.map(tech => (
-                                                        <li key={tech} className="font-mono text-xs sm:text-sm text-accent bg-accent/10 px-3 py-1 rounded-full">{tech}</li>
-                                                    ))}
-                                                </ul>
+                                        <div className="bg-white/5 backdrop-blur-md border border-white/10 p-5 sm:p-8 rounded-2xl mb-6 sm:mb-8 relative z-10 w-full shadow-xl">
+                                            <p className="text-muted leading-relaxed text-sm sm:text-base md:text-lg italic">
+                                                "{project.description}"
+                                            </p>
+                                        </div>
 
-                                                <div className="flex gap-6">
-                                                    <a href={project.live}
-                                                        target="_blank"
-                                                        rel="noopener noreferrer"
-                                                        className="flex items-center gap-2 text-sm font-medium hover:text-accent transition-colors">
-                                                        <ExternalLink className="w-5 h-5" /> Live Demo
-                                                    </a>
-                                                    <a href={project.github}
-                                                        target="_blank"
-                                                        rel="noopener noreferrer"
-                                                        className="flex items-center gap-2 text-sm font-medium hover:text-accent transition-colors">
-                                                        <Github className="w-5 h-5" /> Source
-                                                    </a>
-                                                </div>
-                                            </div>
+                                        <ul className="flex flex-wrap gap-2 sm:gap-3 mb-8 sm:mb-10">
+                                            {project.tech.map(tech => (
+                                                <li key={tech} className="font-mono text-[10px] sm:text-xs text-accent border border-accent/20 bg-accent/5 px-3 sm:px-4 py-1.5 rounded-full hover:bg-accent/10 transition-colors">
+                                                    {tech}
+                                                </li>
+                                            ))}
+                                        </ul>
+
+                                        <div className="flex flex-wrap gap-4 sm:gap-8">
+                                            <a href={project.live}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="flex items-center gap-3 text-sm font-semibold hover:text-accent transition-all hover:translate-x-1">
+                                                <ExternalLink className="w-5 h-5" /> Live Demo
+                                            </a>
+                                            <a href={project.github}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="flex items-center gap-3 text-sm font-semibold hover:text-accent transition-all hover:translate-x-1">
+                                                <Github className="w-5 h-5" /> Source Code
+                                            </a>
                                         </div>
                                     </div>
-                                ))}
+                                </div>
+
+                                {/* Background Glow */}
+                                <div className="absolute -bottom-10 -left-10 w-40 h-40 bg-accent/5 rounded-full blur-[100px] -z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
                             </motion.div>
-                        </div>
-
-                        {/* Mobile Navigation */}
-                        <div className="flex gap-4 justify-center mt-12 md:hidden">
-                            <button
-                                onClick={handlePrev}
-                                className="p-3 rounded-full border border-white/10 hover:border-accent hover:text-accent transition-colors bg-white/5 backdrop-blur-sm"
-                            >
-                                <ChevronLeft className="w-6 h-6" />
-                            </button>
-                            <button
-                                onClick={handleNext}
-                                className="p-3 rounded-full border border-white/10 hover:border-accent hover:text-accent transition-colors bg-white/5 backdrop-blur-sm"
-                            >
-                                <ChevronRight className="w-6 h-6" />
-                            </button>
-                        </div>
-
-                        {/* Dots Indicators */}
-                        <div className="flex justify-center gap-3 mt-8">
-                            {projects.map((_, idx) => (
-                                <button
-                                    key={idx}
-                                    onClick={() => setCurrentIndex(idx)}
-                                    className={`w-3 h-3 rounded-full transition-all ${currentIndex === idx
-                                            ? "bg-accent scale-125"
-                                            : "bg-white/20 hover:bg-white/40"
-                                        }`}
-                                    aria-label={`Go to project ${idx + 1}`}
-                                />
-                            ))}
-                        </div>
+                        ))}
                     </div>
                 </motion.div>
             </div>

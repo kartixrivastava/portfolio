@@ -188,7 +188,7 @@ export default function Hero() {
           <div className="flex flex-col sm:flex-row flex-wrap items-center gap-4 mt-4">
             <Link
               href="/projects"
-              className="group relative flex w-full sm:w-auto justify-center items-center gap-2 bg-slate-900 dark:bg-white text-white dark:text-slate-900 px-8 py-4 rounded-xl font-bold transition-all hover:scale-[1.02] active:scale-[0.98] overflow-hidden shadow-lg shadow-slate-900/20 dark:shadow-white/10"
+              className="group relative flex w-full sm:w-auto justify-center items-center gap-2 bg-slate-900 dark:bg-white text-white dark:text-slate-900 px-8 py-4 rounded-xl font-bold tracking-normal transition-all hover:scale-[1.02] active:scale-[0.98] overflow-hidden shadow-lg shadow-slate-900/20 dark:shadow-white/10"
             >
               <div className="absolute inset-0 rotate-180 bg-linear-to-tr from-transparent via-white/20 dark:via-black/10 to-transparent translate-y-full group-hover:-translate-y-full transition-transform duration-700 ease-in-out" />
               View My Work <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -197,7 +197,7 @@ export default function Hero() {
             <a
               href="/Resume/Kartik_Resume.pdf"
               download="Kartik_Srivastava_Resume.pdf"
-              className="group flex w-full sm:w-auto justify-center items-center gap-2 rounded-xl border-2 border-slate-200 dark:border-white/10 bg-white/50 dark:bg-transparent px-8 py-3.5 font-bold text-slate-700 dark:text-white transition-all hover:border-slate-300 dark:hover:border-white/20 hover:bg-white dark:hover:bg-white/5 active:scale-[0.98] backdrop-blur-sm"
+              className="group flex w-full sm:w-auto justify-center items-center gap-2 rounded-xl border-2 border-slate-200 dark:border-white/10 bg-white/50 dark:bg-transparent px-8 py-3.5 font-bold tracking-normal text-slate-700 dark:text-white transition-all hover:border-slate-300 dark:hover:border-white/20 hover:bg-white dark:hover:bg-white/5 active:scale-[0.98] backdrop-blur-sm"
             >
               <Download className="h-4 w-4 group-hover:-translate-y-1 transition-transform" /> 
               Download Resume

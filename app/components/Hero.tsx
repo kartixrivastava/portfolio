@@ -18,7 +18,7 @@ export default function Hero() {
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1, ease: "easeOut" }}
-          className="order-2 lg:order-1 relative w-full aspect-square max-w-[500px] mx-auto flex items-center justify-center p-4"
+          className="order-2 lg:order-1 relative w-full aspect-square max-w-125 mx-auto flex items-center justify-center p-4"
         >
           {/* Central Aura Sphere */}
           <motion.div
@@ -68,14 +68,14 @@ export default function Hero() {
                  initial={{ scale: 0.8, opacity: 0 }}
                  animate={{ scale: 1, opacity: 1, borderRadius: ["60% 40% 30% 70% / 60% 30% 70% 40%", "30% 70% 70% 30% / 30% 30% 70% 70%", "60% 40% 30% 70% / 60% 30% 70% 40%"] }}
                  transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-                 className="w-20 h-20 mx-auto my-3 bg-linear-to-br from-cyan-400 to-blue-500 dark:from-cyan-400 dark:to-blue-500 p-[2px] shadow-xl overflow-hidden block"
+                 className="w-20 h-20 mx-auto my-3 bg-linear-to-br from-cyan-400 to-blue-500 dark:from-cyan-400 dark:to-blue-500 p-0.5 shadow-xl overflow-hidden block"
                >
                  <motion.div 
                     animate={{ borderRadius: ["60% 40% 30% 70% / 60% 30% 70% 40%", "30% 70% 70% 30% / 30% 30% 70% 70%", "60% 40% 30% 70% / 60% 30% 70% 40%"] }}
                     transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
                     className="w-full h-full bg-white dark:bg-[#0b0f14] flex items-center justify-center overflow-hidden"
                  >
-                    <span className="text-2xl font-black text-slate-800 dark:text-white tracking-tighter">Hello There!</span>
+                    <span className="text-2xl font-black text-slate-800 dark:text-white tracking-tighter"></span>
                  </motion.div>
                </motion.div>
                {/* <h3 className="text-xl sm:text-2xl font-bold text-slate-800 dark:text-white tracking-tight leading-none mt-2">Kartik<span className="text-accent">.</span></h3>

@@ -97,27 +97,51 @@ export default function Projects() {
                                             </p>
                                         </div>
 
-                                        <ul className="flex flex-wrap gap-2 sm:gap-3 mb-8 sm:mb-10">
+                                        <motion.ul 
+                                            initial="hidden"
+                                            whileInView="visible"
+                                            viewport={{ once: true }}
+                                            variants={{
+                                                hidden: { opacity: 0 },
+                                                visible: {
+                                                    opacity: 1,
+                                                    transition: {
+                                                        staggerChildren: 0.1
+                                                    }
+                                                }
+                                            }}
+                                            className="flex flex-wrap gap-2 sm:gap-3 mb-8 sm:mb-10"
+                                        >
                                             {project.tech.map(tech => (
-                                                <li key={tech} className="font-mono text-[10px] sm:text-xs text-accent border border-accent/20 bg-accent/5 px-3 sm:px-4 py-1.5 rounded-full hover:bg-accent/10 transition-colors">
+                                                <motion.li 
+                                                    variants={{ hidden: { opacity: 0, scale: 0.8 }, visible: { opacity: 1, scale: 1 } }}
+                                                    key={tech} 
+                                                    className="font-mono text-[10px] sm:text-xs text-accent border border-accent/20 bg-accent/5 px-3 sm:px-4 py-1.5 rounded-full hover:bg-accent/10 transition-colors"
+                                                >
                                                     {tech}
-                                                </li>
+                                                </motion.li>
                                             ))}
-                                        </ul>
+                                        </motion.ul>
 
                                         <div className="flex flex-wrap gap-4 sm:gap-8">
-                                            <a href={project.live}
+                                            <motion.a 
+                                                whileHover={{ scale: 1.05 }} 
+                                                whileTap={{ scale: 0.95 }}
+                                                href={project.live}
                                                 target="_blank"
                                                 rel="noopener noreferrer"
                                                 className="flex items-center gap-3 text-sm font-semibold hover:text-accent transition-all hover:translate-x-1">
                                                 <ExternalLink className="w-5 h-5" /> Live Demo
-                                            </a>
-                                            <a href={project.github}
+                                            </motion.a>
+                                            <motion.a 
+                                                whileHover={{ scale: 1.05 }} 
+                                                whileTap={{ scale: 0.95 }}
+                                                href={project.github}
                                                 target="_blank"
                                                 rel="noopener noreferrer"
                                                 className="flex items-center gap-3 text-sm font-semibold hover:text-accent transition-all hover:translate-x-1">
                                                 <Github className="w-5 h-5" /> Source Code
-                                            </a>
+                                            </motion.a>
                                         </div>
                                     </div>
                                 </div>

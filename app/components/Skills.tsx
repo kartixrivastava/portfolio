@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Code2, Layout, Wrench, BrainCircuit } from "lucide-react";
+import { Code2, Layout, Wrench, Brain } from "lucide-react";
 
 const skillCategories = [
   {
@@ -23,11 +23,11 @@ const skillCategories = [
   {
     title: "Tools",
     icon: <Wrench className="w-5 h-5 text-accent" />,
-    skills: ["Git", "Vercel", "Clerk"],
+    skills: ["Git", "Vercel", "Clerk", "Figma", "Stitch"],
   },
   {
     title: "Concepts",
-    icon: <BrainCircuit className="w-5 h-5 text-accent" />,
+    icon: <Brain className="w-5 h-5 text-accent" />,
     skills: ["Data Structures & Algorithms"],
   },
 ];

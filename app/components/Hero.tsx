@@ -10,9 +10,9 @@ export default function Hero() {
       {/* Background ambient lighting */}
       <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-cyan-400/20 dark:bg-cyan-400/10 rounded-full blur-[120px] pointer-events-none" />
       <div className="absolute bottom-1/4 right-1/4 w-120 h-120 bg-violet-500/20 dark:bg-violet-500/10 rounded-full blur-[140px] pointer-events-none" />
-      
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-8 items-center w-full z-10 relative">
-        
+
         {/* Left Space: Aura Orbit UI */}
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
@@ -47,40 +47,38 @@ export default function Hero() {
           />
 
           {/* Central Core Glass Layer */}
-          <motion.div 
-             animate={{ borderRadius: ["30% 70% 70% 30% / 30% 30% 70% 70%", "50% 50% 30% 70% / 70% 30% 70% 30%", "30% 70% 70% 30% / 30% 30% 70% 70%"] }}
-             transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
-             className="relative z-10 w-[55%] h-[55%] border border-white/50 dark:border-white/10 bg-white/30 dark:bg-black/20 backdrop-blur-2xl shadow-[0_8px_32px_0_rgba(15,23,42,0.05)] dark:shadow-[0_8px_32px_0_rgba(255,255,255,0.02)] flex items-center justify-center p-8"
+          <motion.div
+            animate={{ borderRadius: ["30% 70% 70% 30% / 30% 30% 70% 70%", "50% 50% 30% 70% / 70% 30% 70% 30%", "30% 70% 70% 30% / 30% 30% 70% 70%"] }}
+            transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+            className="relative z-10 w-[55%] h-[55%] border border-white/50 dark:border-white/10 bg-white/30 dark:bg-black/20 backdrop-blur-2xl shadow-[0_8px_32px_0_rgba(15,23,42,0.05)] dark:shadow-[0_8px_32px_0_rgba(255,255,255,0.02)] flex items-center justify-center p-8"
           >
-             <motion.div 
-                animate={{ borderRadius: ["50% 50% 30% 70% / 70% 30% 70% 30%", "30% 70% 70% 30% / 30% 30% 70% 70%", "50% 50% 30% 70% / 70% 30% 70% 30%"] }}
-                transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
-                className="absolute inset-0 border border-white/40 dark:border-white/5 opacity-50 scale-105" 
-             />
-             <motion.div 
-                animate={{ borderRadius: ["40% 60% 70% 30% / 40% 50% 60% 50%", "70% 30% 50% 50% / 30% 30% 70% 70%", "40% 60% 70% 30% / 40% 50% 60% 50%"] }}
-                transition={{ duration: 12, repeat: Infinity, ease: "easeInOut" }}
-                className="absolute inset-0 border border-white/30 dark:border-white/5 opacity-30 scale-110" 
-             />
-             
-             <div className="text-center relative z-20">
-               <motion.div 
+            <motion.div
+              animate={{ borderRadius: ["50% 50% 30% 70% / 70% 30% 70% 30%", "30% 70% 70% 30% / 30% 30% 70% 70%", "50% 50% 30% 70% / 70% 30% 70% 30%"] }}
+              transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
+              className="absolute inset-0 border border-white/40 dark:border-white/5 opacity-50 scale-105"
+            />
+            <motion.div
+              animate={{ borderRadius: ["40% 60% 70% 30% / 40% 50% 60% 50%", "70% 30% 50% 50% / 30% 30% 70% 70%", "40% 60% 70% 30% / 40% 50% 60% 50%"] }}
+              transition={{ duration: 12, repeat: Infinity, ease: "easeInOut" }}
+              className="absolute inset-0 border border-white/30 dark:border-white/5 opacity-30 scale-110"
+            />
+
+            <div className="text-center relative z-20">
+              {/* <motion.div 
                  initial={{ scale: 0.8, opacity: 0 }}
                  animate={{ scale: 1, opacity: 1, borderRadius: ["60% 40% 30% 70% / 60% 30% 70% 40%", "30% 70% 70% 30% / 30% 30% 70% 70%", "60% 40% 30% 70% / 60% 30% 70% 40%"] }}
                  transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
                  className="w-20 h-20 mx-auto my-3 bg-linear-to-br from-cyan-400 to-blue-500 dark:from-cyan-400 dark:to-blue-500 p-0.5 shadow-xl overflow-hidden block"
-               >
-                 <motion.div 
+               > */}
+              {/* <motion.div 
                     animate={{ borderRadius: ["60% 40% 30% 70% / 60% 30% 70% 40%", "30% 70% 70% 30% / 30% 30% 70% 70%", "60% 40% 30% 70% / 60% 30% 70% 40%"] }}
                     transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
                     className="w-full h-full bg-white dark:bg-[#0b0f14] flex items-center justify-center overflow-hidden"
                  >
                     <span className="text-2xl font-black text-slate-800 dark:text-white tracking-tighter"></span>
-                 </motion.div>
-               </motion.div>
-               {/* <h3 className="text-xl sm:text-2xl font-bold text-slate-800 dark:text-white tracking-tight leading-none mt-2">Kartik<span className="text-accent">.</span></h3>
-               <p className="text-[10px] font-mono text-slate-500 dark:text-muted uppercase tracking-widest mt-1">Dev Core</p> */}
-             </div>
+                 </motion.div> */}
+              {/* </motion.div> */}
+            </div>
           </motion.div>
 
           {/* Card 1: Experience / Focus */}
@@ -121,7 +119,7 @@ export default function Hero() {
                 <Code2 className="w-3 h-3" /> Tech Stack
               </p>
               <div className="flex gap-1.5 flex-wrap w-28">
-                {["React", "Next", "TS", "Tailwind", "Framer Motion", "TanStack Query",""].map(tech => (
+                {["React", "Next", "TS", "Tailwind", "Framer Motion", "TanStack Query", ""].map(tech => (
                   <span key={tech} className="px-2 py-0.5 text-[9px] font-bold rounded-md bg-white dark:bg-white/5 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-white/10 shadow-sm">
                     {tech}
                   </span>
@@ -130,7 +128,7 @@ export default function Hero() {
             </motion.div>
           </motion.div>
 
-         
+
 
           {/* Card 3: Availability */}
           <motion.div
@@ -162,16 +160,16 @@ export default function Hero() {
           className="order-1 lg:order-2 flex flex-col gap-6 lg:pl-10 relative z-20 mt-8 lg:mt-0"
         >
           <div className="space-y-4">
-            <motion.div 
-               initial={{ opacity: 0, y: 10 }}
-               animate={{ opacity: 1, y: 0 }}
-               transition={{ delay: 0.3 }}
-               className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white dark:bg-white/5 border border-slate-200 dark:border-white/10 text-xs font-semibold text-slate-700 dark:text-slate-300 shadow-sm backdrop-blur-sm w-fit"
+            <motion.div
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.3 }}
+              className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white dark:bg-white/5 border border-slate-200 dark:border-white/10 text-xs font-semibold text-slate-700 dark:text-slate-300 shadow-sm backdrop-blur-sm w-fit"
             >
               <Sparkles className="w-3.5 h-3.5 text-accent" />
               <span>Available for new opportunities</span>
             </motion.div>
-            
+
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tighter leading-[1.1]">
               <span className="text-slate-400 dark:text-muted font-light block mb-2 text-2xl sm:text-3xl md:text-4xl tracking-tight">Hello, I'm Kartik.</span>
               Crafting Digital <br className="hidden sm:block" />
@@ -193,13 +191,13 @@ export default function Hero() {
               <div className="absolute inset-0 rotate-180 bg-linear-to-tr from-transparent via-white/20 dark:via-black/10 to-transparent translate-y-full group-hover:-translate-y-full transition-transform duration-700 ease-in-out" />
               View My Work <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </Link>
-            
+
             <a
               href="/Resume/Kartik_Resume.pdf"
-              download="Kartik_Srivastava_Resume.pdf"
+              download="Kartik_Resume.pdf"
               className="group flex w-full sm:w-auto justify-center items-center gap-2 rounded-xl border-2 border-slate-200 dark:border-white/10 bg-white/50 dark:bg-transparent px-8 py-3.5 font-bold tracking-normal text-slate-700 dark:text-white transition-all hover:border-slate-300 dark:hover:border-white/20 hover:bg-white dark:hover:bg-white/5 active:scale-[0.98] backdrop-blur-sm"
             >
-              <Download className="h-4 w-4 group-hover:-translate-y-1 transition-transform" /> 
+              <Download className="h-4 w-4 group-hover:-translate-y-1 transition-transform" />
               Download Resume
             </a>
           </div>

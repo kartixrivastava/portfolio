@@ -194,7 +194,7 @@ export default function Hero() {
 
             <a
               href="/Resume/Kartik_Resume.pdf"
-              download="Kartik_Resume.pdf"
+              download="Kartik_Srivastava.pdf"
               className="group flex w-full sm:w-auto justify-center items-center gap-2 rounded-xl border-2 border-slate-200 dark:border-white/10 bg-white/50 dark:bg-transparent px-8 py-3.5 font-bold tracking-normal text-slate-700 dark:text-white transition-all hover:border-slate-300 dark:hover:border-white/20 hover:bg-white dark:hover:bg-white/5 active:scale-[0.98] backdrop-blur-sm"
             >
               <Download className="h-4 w-4 group-hover:-translate-y-1 transition-transform" />
